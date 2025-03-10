@@ -36,11 +36,11 @@ export default function FormularioBusqueda( { handleSubmit } ) {
                     Miles of Distance (Mi)
                 </label>
 
-                <input id="miles" type="range" min="1" max="11" value={radius} onChange={(e) => setRadius(e.target.value)} 
+                <input id="miles" type="range" min="1" max="5" value={radius} onChange={(e) => setRadius(e.target.value)} 
                 className="w-full h-2 bg-purple-300 rounded-lg cursor-pointer accent-purple-950 appearance-none" /> 
             
                 <div className="w-full flex justify-between text-md">
-                    <span>1</span><span>5</span><span>10</span>
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
                 </div>
 
             </div>
