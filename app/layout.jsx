@@ -1,8 +1,12 @@
+"use-client"
 
 // UI
 import { Geist, Geist_Mono } from "next/font/google";
 import "./ui/globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
+// Leatflet necesita archivo css para verse
+import "leaflet/dist/leaflet.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +46,6 @@ export default function RootLayout({ children }) {
         <Footer />
         
       </body>
-
 
     </html>
   );

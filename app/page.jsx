@@ -1,3 +1,7 @@
+"use-client"
+
+import FormularioBusqueda from './ui/formulario/FormularioBusqueda';
+import Mapa from './ui/mapa/Mapa'
 
 export default function Home() {
 
@@ -5,14 +9,14 @@ export default function Home() {
 
       <div className="flex flex-col-reverse w-full md:flex-row lg:flex-row">
 
-        <div className="bg-green-200 w-full h-screen text-black flex justify-center items-center md:w-2/3">
-          ACA VA EL MAPA
+        <div className="w-full p-8 flex justify-center items-center md:w-2/3">
+          <Mapa />
         </div>
-
-        <div className="bg-red-200 w-full h-screen text-black flex justify-center items-center md:w-1/3">
-          ACA VA EL FORM
+        
+        <div className="w-full pt-8 px-8 text-black flex justify-center items-center md:w-1/3 md:pt-0 lg:pt-0">
+          <FormularioBusqueda />
         </div>
-    
+        
       </div>
 
     );
