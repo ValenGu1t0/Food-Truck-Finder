@@ -1,4 +1,4 @@
-"use client"; // Para que useState funcione en Next.js (App Router)
+'use client'
 
 import { useState } from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export default function Nav() {
         
             <Link href="/"><h2 className="text-xl font-bold font-mono italic p-4">FOOD-FINDER</h2></Link>
 
-            <button className="sm:hidden p-3 text-white cursor-pointer " onClick={() => setIsOpen(!isOpen)} >
+            <button className="sm:hidden p-3 text-white cursor-pointer" onClick={() => setIsOpen(!isOpen)} >
                 <i className="fas fa-bars text-xl"></i>
             </button>
 
@@ -27,7 +27,7 @@ export default function Nav() {
                         <li className="font-sans">About</li>
                     </Link>
 
-                    <a href="https://github.com/ValenGu1t0" target="_blank" rel="noopener noreferrer" 
+                    <a href="https://github.com/ValenGu1t0/Food-Truck-Finder" target="_blank" rel="noopener noreferrer" 
                     className="p-5 font-medium hover:bg-purple-700 hover:text-white text-center transition duration-200">
                         <li className="font-sans">GitHub</li>
                     </a>
