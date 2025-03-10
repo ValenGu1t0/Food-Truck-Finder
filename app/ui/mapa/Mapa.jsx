@@ -44,8 +44,9 @@ export default function Mapa({ lat, lng, zoom = 12, foodTrucks}) {
                 <Marker key={index} position={[truck.latitude, truck.longitude]} icon={markerIcon}>
 
                     <Popup>
-                        <strong>{truck.applicant}</strong>
-                        <p>Address: {truck.address}</p>
+                        <strong>{truck.applicant}</strong><br /><br />
+                        <strong>Meals: </strong>{truck.fooditems}<br /><br />
+                        <strong>Address: </strong>{truck.address}
                     </Popup>
 
                 </Marker>
