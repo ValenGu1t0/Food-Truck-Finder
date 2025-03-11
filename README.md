@@ -20,7 +20,7 @@ Para el Back-End usé el mismo API Routes de Next.js, el cual permite manejar un
 
 ## DevOps
 
-En cuanto al deploy de la App, se puede ver el resultado final [acá](https://restaurant-menu-react-eight.vercel.app/), pero si quisieras correrlo en tu equipo, te menciono las librerías y paquetes que usé para su desarrollo:
+En cuanto al deploy de la App, se puede ver el resultado final [acá](https://food-truck-finder-red.vercel.app/), pero si quisieras correrlo en tu equipo, te menciono las librerías y paquetes que usé para su desarrollo:
 
 - **NPM** para instalar las dependencias.
 - **Next.js** como framework para el desarrollo full-stack.
@@ -48,7 +48,7 @@ Para correr el proyecto en tu equipo, sigue estos pasos:
 
 ## Fuentes
 
-La data se obtuvo del siguiente [servicio](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/about_data) perteneciente a la ciudad de San Francisco, el cual habilita un listado de todas las facilidades de comida rapida de la ciudad en formato JSON.
+La data se obtuvo del siguiente [servicio](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/about_data) perteneciente a la ciudad de San Francisco, el cual habilita un listado de todos los Food-Truck de comida rápida de la ciudad en formato JSON.
 
 Para el mapa, use el mapa interactivo open source de [leaflet](https://leafletjs.com/), el cual es super facil de instalar y manipular. 
 
