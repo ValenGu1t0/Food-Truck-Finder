@@ -50,7 +50,9 @@ export default function Mapa({ lat, lng, zoom = 12, foodTrucks}) {
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         
             {/* Posicion Inicial */}
-            <Marker position={[lat, lng]} icon={userMarkerIcon} />
+            <Marker position={[lat, lng]} icon={userMarkerIcon} >
+                <Popup><strong>You are here!</strong></Popup>
+            </Marker>
 
             {/* Recorremos el estado actual de FoodTrucks y agregamos un marcador a cada uno que corresponda */}
             {foodTrucks.map((truck, index) => (

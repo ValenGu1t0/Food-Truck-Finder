@@ -75,8 +75,8 @@ export default function FormularioBusqueda( { handleSubmit } ) {
                 </button>
 
             </form>
+            )
             
-        )
         }</div>
     )
 }

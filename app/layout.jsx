@@ -18,7 +18,7 @@ import Footer from "./ui/footer/Footer";
 
 
 // Metadata
-export const metadata = { title: "Coding Challenge - Valentino Privitera", description: "Food-Truck Finder in Next.js" };
+export const metadata = { title: "Valentino Privitera - Coding Challenge", description: "Food-Truck Finder in Next.js" };
 
 
 /* MAIN */

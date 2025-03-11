@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Food Truck Finder
 
-First, run the development server:
+App Web hecha con Next.js que permite encontrar los Food-Truck mas cercanos a la posición del usuario, el cual se asume que se encuentra en la ciudad de San Francisco, EEUU. El usuario puede buscar por comida (palabra clave) o simplemente ver todos los truck que hayan en el radio indicado (en millas).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Como el desafío solicitaba usar tanto Front-End como Back-End, decidí usar Next.js como herramienta ya que me permite aplicar ambas arquitecturas en el mismo proyecto.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La App es de simple funcionamiento, pero también la hice escalable para integrar geolocalización del usuario y adaptabilidad a otras bases de datos de otras ciudades. 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Front-End
 
-## Learn More
+Para el Front-End usé React y TailwindCSS (ya por defecto con Next.js), los cuales me ayudaron a crear componentes reutilizables y de fácil acceso, además de que permiten tener una UI sencilla pero eficaz.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Back-End
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Para el Back-End usé el mismo API Routes de Next.js, el cual permite manejar un Back simple dentro del mismo proyecto, sin necesidad de servidores externos ni lógicas complejas. Como los datos proporcionados se encontraban en formato JSON, decidí que esta era la mejor forma de crear el Back para la App.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## DevOps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+En cuanto al deploy de la App, se puede ver el resultado final [acá](https://restaurant-menu-react-eight.vercel.app/), pero si quisieras correrlo en tu equipo, te menciono las librerías y paquetes que usé para su desarrollo:
+
+- **NPM** para instalar las dependencias.
+- **Next.js** como framework para el desarrollo full-stack.
+- **Leaflet** y **react-leaflet** para la integración y renderizado de un mapa interactivo (y open source ;) ).
+- **Vercel** para el despliegue de la aplicación.
+
+### Instalación y Ejecución Local
+
+Para correr el proyecto en tu equipo, sigue estos pasos:
+
+1. Clona el repositorio:
+
+   ```sh
+   git clone https://github.com/ValenGu1t0/Food-Truck-Finder
+   cd <nombre_del_proyecto>
+
+2. Instala las dependencias:
+
+    npm install
+
+3. Inicia el servidor de desarrollo:
+
+    npm run dev
+
+
+## Fuentes
+
+La data se obtuvo del siguiente [servicio](https://data.sfgov.org/Economy-and-Community/Mobile-Food-Facility-Permit/rqzj-sfat/about_data) perteneciente a la ciudad de San Francisco, el cual habilita un listado de todas las facilidades de comida rapida de la ciudad en formato JSON.
+
+Para el mapa, use el mapa interactivo open source de [leaflet](https://leafletjs.com/), el cual es super facil de instalar y manipular. 
+

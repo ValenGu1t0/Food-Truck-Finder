@@ -10,20 +10,20 @@ export default function Home() {
     const [foodTrucks, setFoodTrucks] = useState([]);
 
     /* Posicion Inicial, escalable a geolocalizacion en un futuro */
-    const [userLat, setUserLat] = useState(37.77493);
-    const [userLng, setUserLng] = useState(-122.41942);
-
+    const [userLat, setUserLat] = useState(37.756231);
+    const [userLng, setUserLng] = useState(-122.441092);
+ 
 
     const handleSubmit = async (meal, radius) => {
 
       try {
 
         const response = await fetch("/api/foodtrucks", {
+
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ meal, radius, userLat, userLng })
+          
         });
     
         if (!response.ok) {  throw new Error("Error al obtener los food trucks");  }
@@ -34,7 +34,7 @@ export default function Home() {
 
         if (data.length === 0) {  window.alert("No food trucks found near your area. Try searching for another meal!");  }
     
-      } catch (error) {  console.error("Error en la solicitud:", error); }
+      } catch (error) {  window.alert("Error en la solicitud:", error); }
     };
 
     return (
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="flex flex-col-reverse w-full md:flex-row lg:flex-row">
 
         <div className="w-full p-8 flex justify-center items-center md:w-2/3">
-          {/* Pasamos como prop el estado actual de Food-Trucks (ya filtrados) y la pos. del client */}
+          {/* Pasamos como prop el estado actual de Food-Trucks (ya filtrados) y la posicion del client */}
           <Mapa lat={userLat} lng={userLng} foodTrucks={foodTrucks} />
         </div>
 

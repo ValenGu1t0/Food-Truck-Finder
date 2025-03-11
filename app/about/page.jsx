@@ -21,7 +21,7 @@ export default function About() {
 
                 <div>
                     <h3 className="font-semibold font-mono text-purple-950">Why San Francisco?</h3>
-                    <p className="text-justify font-sans">San Francisco is a city full of culture, diversity, and incredible food. From the iconic waterfront to bustling neighborhoods, food trucks bring the city’s vibrant culinary scene to life. We believe street food is an essential part of SF’s identity, and our</p>
+                    <p className="text-justify font-sans">San Francisco is a city full of culture, diversity, and incredible food. From the iconic waterfront to bustling neighborhoods, food trucks bring the city's vibrant culinary scene to life. We believe street food is an essential part of SF's identity, and our</p>
                 </div>
 
             </div>
