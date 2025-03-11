@@ -41,7 +41,7 @@ export default function Home() {
 
       <div className="flex flex-col-reverse w-full md:flex-row lg:flex-row">
 
-        <div className="w-full p-8 flex justify-center items-center md:w-2/3">
+        <div className="w-full p-12 flex justify-center items-center md:w-2/3">
           {/* Pasamos como prop el estado actual de Food-Trucks (ya filtrados) y la posicion del client */}
           <Mapa lat={userLat} lng={userLng} foodTrucks={foodTrucks} />
         </div>
