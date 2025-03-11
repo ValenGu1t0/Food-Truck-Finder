@@ -18,18 +18,21 @@ export default function Home() {
 
       try {
 
-          const response = await fetch("/api/foodtrucks", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ meal, radius, userLat, userLng })
-          });
+        const response = await fetch("/api/foodtrucks", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ meal, radius, userLat, userLng })
+        });
     
-          if (!response.ok) {  throw new Error("Error al obtener los food trucks");  }
+        if (!response.ok) {  throw new Error("Error al obtener los food trucks");  }
     
-          const data = await response.json();
-          setFoodTrucks(data);
+        const data = await response.json();
+
+        setFoodTrucks(data);
+
+        if (data.length === 0) {  window.alert("No food trucks found near your area. Try searching for another meal!");  }
     
       } catch (error) {  console.error("Error en la solicitud:", error); }
     };

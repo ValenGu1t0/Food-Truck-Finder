@@ -21,12 +21,13 @@ export default function FormularioBusqueda( { handleSubmit } ) {
     
     return (
 
-        <div>{!showForm ? (
+        <div>{!showForm ? 
+        (
             
             <div className="flex flex-col justify-center items-start p-8 gap-6 bg-purple-600 rounded-xl shadow-2xl transition-all duration-500">
                 <h2 className="font-mono text-2xl font-semibold text-indigo-950">Welcome to Food-Finder!</h2>
-                <p className="font-sans text-md text-slate-100 text-justify">Discover the best food-trucks in <strong className="text-indigo-950">San Francisco!</strong> Select the type of meal you want and set a distance range.</p>
-                <p className="font-sans text-md text-slate-100 text-justify">If you want to look for any recommendations near you, just select the radius and hit search!</p>
+                <p className="font-sans text-md text-slate-100 text-justify">Discover the best food-trucks in <strong className="text-indigo-950">San Francisco</strong>! Type the kind of meal you want and set a distance range.</p>
+                <p className="font-sans text-md text-slate-100 text-justify">If you want to see any type of food near you directly, just hit Search!</p>
 
 
                 <button onClick={() => setShowForm(true)} 
@@ -45,7 +46,7 @@ export default function FormularioBusqueda( { handleSubmit } ) {
                     <label htmlFor="meal" className="text-lg font-sans">
                         What kind of meal would you like?
                     </label>
-                    <input id="meal" type="text" value={meal} onChange={(e) => setMeal(e.target.value)} placeholder="Only if you want something special.." 
+                    <input id="meal" type="text" value={meal} onChange={(e) => setMeal(e.target.value)} placeholder="Only if you're looking for something special." 
                     className="p-2 w-full bg-gray-100 border border-white rounded-lg focus:border-purple-950 focus:outline-none"  />
                 </div>
 
@@ -70,6 +71,7 @@ export default function FormularioBusqueda( { handleSubmit } ) {
 
             </form>
             
-        )}</div>
+        )
+        }</div>
     )
 }
