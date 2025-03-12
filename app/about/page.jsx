@@ -4,7 +4,7 @@ export default function About() {
 
     return (
 
-        <section className="flex flex-col justify-center items-center w-full p-4">
+        <section className="flex flex-col justify-center items-center w-full p-8">
           
             <div className="flex flex-col justify-center items-center text-black p-8 gap-8 w-[90%] bg-purple-300 rounded-xl sm:max-w-2/4 lg:max-w-2/4 ">
                 <h2 className="text-2xl font-semibold font-mono text-purple-950">About Us</h2>
