@@ -41,9 +41,9 @@ export default function Home() {
 
       <div className="flex flex-col-reverse w-full md:flex-row lg:flex-row">
 
-        <div className="w-full p-12 flex justify-center items-center md:w-2/3">
+        <div className="w-full p-12 flex justify-center items-center md:w-2/3 md:p-8 lg:p-8">
           {/* Pasamos como prop el estado actual de Food-Trucks (ya filtrados) y la posicion del client */}
-          <Mapa lat={userLat} lng={userLng} foodTrucks={foodTrucks} />
+          <Mapa lat={userLat} lng={userLng} setUserLat={setUserLat} setUserLng={setUserLng} foodTrucks={foodTrucks} />
         </div>
 
         <div className="w-full pt-8 px-8 text-black flex justify-center items-center md:w-1/3 md:pt-0 lg:pt-0">

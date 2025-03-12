@@ -12,7 +12,7 @@ export default function FormularioBusqueda( { handleSubmit } ) {
     const [meal, setMeal] = useState("");
     const [radius, setRadius] = useState(10);
 
-    /* Pasamos el input de usuario para la request inicial al Back-End */
+    /* Pasamos el input de User para la request inicial al Back-End */
     const handleSubmitForm = (e) => {
 
         e.preventDefault();
@@ -24,7 +24,7 @@ export default function FormularioBusqueda( { handleSubmit } ) {
         <div className="flex justify-center items-center">{!showForm ? 
         (
             
-            <div className="flex flex-col justify-center items-start p-8 gap-6 bg-purple-600 rounded-xl shadow-2xl transition-all duration-500 max-w-[90%]">
+            <div className="flex flex-col justify-center items-start p-8 gap-6 bg-purple-600 rounded-xl shadow-2xl transition-all duration-500">
                 
                 <h2 className="font-mono text-2xl font-semibold text-indigo-950">Welcome to Food-Finder!</h2>
                 <p className="font-sans text-md text-slate-100 text-justify">Discover the best food-trucks in <strong className="text-indigo-950">San Francisco</strong>! Type the kind of meal you want and set a distance range.</p>
