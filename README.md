@@ -39,14 +39,17 @@ Para correr el proyecto en tu equipo, sigue estos pasos:
 
 2. Instala las dependencias (deberías tener Node.js instalado en tu equipo):
 
+   ```sh
     npm install
 
 3. Instala la librería del mapa de Leaflet:
- 
+
+    ```sh
     npm install leaflet react-leaflet
 
 4. Inicia el servidor de desarrollo:
 
+   ```sh
     npm run dev
    
 5. Ya puedes empezar a editar el proyecto!
