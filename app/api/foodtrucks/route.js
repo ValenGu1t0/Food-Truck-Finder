@@ -5,7 +5,8 @@ Decidí que se pueda filtrar por tipo de comida, a través de las propiedad "foo
 y que si no se indica ninguna comida en especial, se muestren todos los foodtruck cercanos.
 
 Además, agregué un radio de busqueda desde 1km a 5km, cubriendo gran parte de la superficie 
-de San Francisco
+de San Francisco. El resultado se toma en millas y se transforma a kilometros; además, se
+calcula el radio real con la fórmula de Haversine para una medida realista de la distancia.
 
 */
 
@@ -33,12 +34,12 @@ function haversine(lat1, lon1, lat2, lon2) {
 // Back-End
 export async function POST(req) {
 
-    if (req.method !== "POST") {  return Response.json({ error: "Method Not Allowed" }, { status: 405 });  }
+    if (req.method !== "POST") {  return Response.json({ error: "Solicitud no permitida" }, { status: 405 });  }
 
     try {
 
       const { meal, radius, userLat, userLng } = await req.json();
-      const radiusKm = Number(radius) * 1.6;
+      const radiusKm = Number(radius) * 1.6;    // de 1 a 5 millas max.
 
       const response = await fetch("https://data.sfgov.org/resource/rqzj-sfat.json");
 
